@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/yuheho7749/.config/nvim'
-let g:netrw_dirhist_2='/home/yuheho7749/.config/nvim/lua'
-let g:netrw_dirhist_1='/home/yuheho7749/.config/nvim'
