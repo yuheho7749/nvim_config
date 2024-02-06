@@ -19,18 +19,17 @@ return {
 				api.config.mappings.default_on_attach(bufnr)
 
 				-- custom mappings
-				vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
+				vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 			end
 
 			require("nvim-tree").setup({
 				on_attach = my_on_attach,
-			}
-			)
+			})
 
 			vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 			vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "Focus file explorer on current file" })
-			vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) 
-			vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) 
+			vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+			vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 		end
 	},
 
