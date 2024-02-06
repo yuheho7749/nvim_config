@@ -2,11 +2,11 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		dependencies = {
-			"nvim-tree/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons", -- TODO: Download icons/fonts for the nvim tree 
 		},
 		config = function()
 			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1 
+			vim.g.loaded_netrwPlugin = 1
 
 			local function my_on_attach(bufnr)
 				local api = require "nvim-tree.api"
@@ -18,8 +18,10 @@ return {
 				-- default mappings
 				api.config.mappings.default_on_attach(bufnr)
 
-				-- custom mappings
+				-- TODO: Add more custom mappings
 				vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+				vim.keymap.set('n', 'vs', api.node.open.vertical, opts('Open: Vertical Split'))
+				vim.keymap.set('n', 'sp', api.node.open.horizontal, opts('Open: Horizontal Split'))
 			end
 
 			require("nvim-tree").setup({
