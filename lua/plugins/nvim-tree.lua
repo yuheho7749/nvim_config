@@ -35,7 +35,7 @@ return {
 
 				vim.keymap.set('n', 'C', api.tree.collapse_all, opts('Collapse All'))
 				vim.keymap.set('n', 'E', api.tree.expand_all, opts('Expand All'))
-				vim.keymap.set('n', '<leader>cd', api.tree.change_root_to_node, opts('CD'))
+				vim.keymap.set('n', '<C-]>', api.tree.change_root_to_node, opts('CD'))
 				vim.keymap.set('n', 'hd', api.tree.toggle_hidden_filter, opts('Toggle Filter: Dotfiles'))
 				vim.keymap.set('n', 'hi', api.tree.toggle_gitignore_filter, opts('Toggle Filter: Git Ignore'))
 
