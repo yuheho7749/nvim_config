@@ -9,10 +9,16 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
 vim.keymap.set("n", "<leader>sp", vim.cmd.sp)
 
+vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
+vim.keymap.set("n", "<leader>sp", vim.cmd.sp)
+vim.keymap.set("n", "<leader>wl", "<C-w>l")
+vim.keymap.set("n", "<leader>wh", "<C-w>h")
+vim.keymap.set("n", "<leader>wj", "<C-w>j")
+vim.keymap.set("n", "<leader>wk", "<C-w>k")
 
 -- Visual Mode --
-vim.keymap.set("n", "v", "V")
-vim.keymap.set("n", "V", "v")
+-- vim.keymap.set("n", "v", "V")
+-- vim.keymap.set("n", "V", "v")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -30,5 +36,5 @@ vim.keymap.set({"n", "v"}, "<a-l>", "$")
 
 
 -- Delete word --
-vim.keymap.set("n", "D", "diw")
+-- vim.keymap.set("n", "D", "diw")
 
