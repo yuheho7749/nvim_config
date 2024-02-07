@@ -17,8 +17,8 @@ vim.keymap.set("n", "<leader>wj", "<C-w>j")
 vim.keymap.set("n", "<leader>wk", "<C-w>k")
 
 -- Visual Mode --
-vim.keymap.set("n", "v", "V")
-vim.keymap.set("n", "V", "v")
+-- vim.keymap.set("n", "v", "V")
+-- vim.keymap.set("n", "V", "v")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

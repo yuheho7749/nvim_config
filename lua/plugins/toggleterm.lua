@@ -5,7 +5,13 @@ return {
 		version = "*",
 		config = function()
 			require("toggleterm").setup {
-				open_mapping = [[<c-\>]],
+				open_mapping = [[<C-\>]],
+				size = 10,
+				persist_size = false,
+				on_open = function()
+					local opts = {buffer = 0}
+					vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+				end
 			}
 
 		end
