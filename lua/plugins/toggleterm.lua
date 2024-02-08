@@ -6,7 +6,7 @@ return {
 		config = function()
 			require("toggleterm").setup {
 				open_mapping = [[<C-\>]],
-				size = 10,
+				size = 12,
 				persist_size = false,
 				on_open = function()
 					local opts = {buffer = 0}
