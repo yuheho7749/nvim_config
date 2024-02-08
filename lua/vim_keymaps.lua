@@ -17,6 +17,10 @@ vim.keymap.set("n", "<leader>wj", "<C-w>j")
 vim.keymap.set("n", "<leader>wk", "<C-w>k")
 vim.keymap.set("n", "<leader>wr", "<C-w>r")
 
+
+-- Visual Block Mode --
+vim.keymap.set("n", "<A-v>", "<C-v>")
+
 -- Visual Mode --
 -- vim.keymap.set("n", "v", "V")
 -- vim.keymap.set("n", "V", "v")
