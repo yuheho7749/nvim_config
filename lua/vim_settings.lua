@@ -5,6 +5,6 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.hlsearch = true 
+vim.opt.hlsearch = true
 
 
