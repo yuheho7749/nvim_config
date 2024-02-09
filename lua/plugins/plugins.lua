@@ -10,6 +10,11 @@ return {
 	},
 	{
 		'stevearc/dressing.nvim',
+		config = function()
+			require("dressing").setup() {
+				-- NOTE: Add config here
+			}
+		end,
 	},
 	{
 		'nvim-lualine/lualine.nvim',
