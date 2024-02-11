@@ -38,6 +38,7 @@ return {
 				-- FAILED:
 			},
 		},
+		vim.keymap.set('n', '<leader>tt', ":TodoTelescope<CR>"),
 	},
 	{
 		'numToStr/Comment.nvim',
