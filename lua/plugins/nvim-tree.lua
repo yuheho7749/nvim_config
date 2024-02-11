@@ -48,7 +48,7 @@ return {
 				vim.keymap.set('n', '<leader>pwd', api.fs.copy.absolute_path, opts('Copy Absolute Path'))
 				vim.keymap.set('n', '<leader>rpwd', api.fs.copy.relative_path, opts('Copy Relative Path'))
 
-				vim.keymap.set('n', '<leader>wf', "<C-W>l", opts('Focus On Right Window'))
+				-- vim.keymap.set('n', '<leader>wf', "<C-W>l", opts('Focus On Right Window'))
 				vim.keymap.set('n', 'q', api.tree.close, opts('Close'))
 				vim.keymap.set('n', 'K', api.node.show_info_popup, opts('Info Popup'))
 				vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
