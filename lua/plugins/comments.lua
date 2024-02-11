@@ -4,10 +4,40 @@ return {
 		lazy = false,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		}
+			keywords = {
+				-- My own keywords
+				WARN = {alt = {"WARNING", "XXX"}},
+				TEST = {icon = "", alt = { "TESTING", "PASSED", "FAILED" }},
+				TEMP = {icon = "󰶯", color = "warning", alt = {"BANDAID", "BANDAGE", "PATCH", "PATCHWORK"}},
+				WTF = {icon = "󰚌", color = "error", alt = {"SKULL", "HUH"}},
+				-- TODO:
+				-- NOTE:
+				-- HACK:
+				-- FIX:
+				-- FIXME:
+				-- FIXIT:
+				-- ISSUE:
+				-- BUG:
+				-- PERF:
+				-- OPTIM:
+				-- PERFORMANCE:
+				-- OPTIMIZE:
+				-- TEMP:
+				-- BANDAGE:
+				-- BANDAID:
+				-- PATCH:
+				-- PATCHWORK:
+				-- WTF:
+				-- HUH:
+				-- XXX:
+				-- WARNING:
+				-- WARN:
+				-- TEST:
+				-- TESTING:
+				-- PASSED:
+				-- FAILED:
+			},
+		},
 	},
 	{
 		'numToStr/Comment.nvim',
