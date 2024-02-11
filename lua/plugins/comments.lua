@@ -15,11 +15,11 @@ return {
 				-- TODO:
 				-- NOTE:
 				-- HACK:
+				-- BUG:
 				-- FIX:
 				-- FIXME:
 				-- FIXIT:
 				-- ISSUE:
-				-- BUG:
 				-- PERF:
 				-- OPTIM:
 				-- PERFORMANCE:
@@ -32,11 +32,13 @@ return {
 				-- WTF:
 				-- HUH:
 				-- XXX:
-				-- WARNING:
 				-- WARN:
+				-- WARNING:
 				-- TEST:
 				-- TESTING:
+				-- PASS:
 				-- PASSED:
+				-- FAIL:
 				-- FAILED:
 			},
 		},
