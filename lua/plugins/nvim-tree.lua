@@ -24,7 +24,7 @@ return {
 				vim.keymap.set('n', '<Tab>', api.node.open.preview, opts('Open Preview'))
 				vim.keymap.set('n', 'vs', api.node.open.vertical, opts('Open: Vertical Split'))
 				vim.keymap.set('n', 'sp', api.node.open.horizontal, opts('Open: Horizontal Split'))
-				vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
+				vim.keymap.set('n', 'wt', api.node.open.tab, opts('Open: New Tab'))
 
 				vim.keymap.set('n', 'a', api.fs.create, opts('Create File/Directory'))
 				vim.keymap.set('n', 'c', api.fs.copy.node, opts('Copy'))
@@ -32,6 +32,8 @@ return {
 				vim.keymap.set('n', 'p', api.fs.paste, opts('Paste'))
 				vim.keymap.set('n', 'r', api.fs.rename, opts('Rename'))
 				vim.keymap.set('n', 'd', api.fs.remove, opts('Delete'))
+				vim.keymap.set('n', 't', api.fs.trash, opts('Trash'))
+				vim.keymap.set('n', 'm', api.marks.toggle, opts('Toggle Bookmark'))
 
 				vim.keymap.set('n', 'C', api.tree.collapse_all, opts('Collapse All'))
 				vim.keymap.set('n', 'E', api.tree.expand_all, opts('Expand All'))
