@@ -7,7 +7,9 @@ return {
 			keywords = {
 				-- My own keywords
 				WARN = {alt = {"WARNING", "XXX"}},
-				TEST = {icon = "", alt = { "TESTING", "PASSED", "FAILED" }},
+				TEST = {icon = "󱈲", color = "warning", alt = {"TESTING"}},
+				PASS = {icon = "󱈬", color = "hint", alt = {"PASSED"}},
+				FAIL = {icon = "󱈴", color = "error", alt = {"FAILED"}},
 				TEMP = {icon = "󰶯", color = "warning", alt = {"BANDAID", "BANDAGE", "PATCH", "PATCHWORK"}},
 				WTF = {icon = "󰚌", color = "error", alt = {"SKULL", "HUH"}},
 				-- TODO:
