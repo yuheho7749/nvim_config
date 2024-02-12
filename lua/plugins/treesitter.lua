@@ -1,17 +1,20 @@
 return {
 	{
-		-- "nvim-treesitter/nvim-treesitter",
-		-- build = ":TSUpdate",
-		-- config = function ()
-		-- 	local configs = require("nvim-treesitter.configs")
-		--
-		-- 	configs.setup({
-		-- 		ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "cpp" },
-		-- 		sync_install = false,
-		-- 		highlight = { enable = true },
-		-- 		indent = { enable = true },
-		-- 	})
-		-- end
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function ()
+			local configs = require("nvim-treesitter.configs")
+
+			-- Windows need to run on zig
+			require("nvim-treesitter.install").compilers = {"zig"}
+
+			configs.setup({
+				ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "cpp" },
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
