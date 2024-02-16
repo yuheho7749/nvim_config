@@ -16,6 +16,7 @@ return {
 					"lua_ls",
 					"pyright",
 					"clangd",
+					"omnisharp",
 					"rust_analyzer",
 				},
 				automatic_installation = true,
@@ -34,6 +35,7 @@ return {
 			default_setup("lua_ls")
 			default_setup("pyright")
 			default_setup("clangd")
+			default_setup("omnisharp")
 			default_setup("rust_analyzer")
 
 			vim.api.nvim_create_autocmd('LspAttach', {
