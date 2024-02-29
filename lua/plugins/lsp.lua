@@ -40,9 +40,6 @@ return {
 			-- For c# (omnisharp) setup
 			lspconfig.omnisharp.setup({
 				capabilities = lsp_capabilities,
-				flags = {
-					debounce_text_changes = 150,
-				},
 			})
 
 			vim.api.nvim_create_autocmd('LspAttach', {
