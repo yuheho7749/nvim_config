@@ -35,8 +35,15 @@ return {
 			default_setup("lua_ls")
 			default_setup("pyright")
 			default_setup("clangd")
-			default_setup("omnisharp")
 			default_setup("rust_analyzer")
+
+			-- For c# (omnisharp) setup
+			lspconfig.omnisharp.setup({
+				capabilities = lsp_capabilities,
+				flags = {
+					debounce_text_changes = 150,
+				},
+			})
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				desc = 'LSP Actions',
