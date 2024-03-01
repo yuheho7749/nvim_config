@@ -1,6 +1,14 @@
 require("vim_keymaps")
 require("vim_settings")
 
+if vim.g.vscode then
+
+-- Running from VSCode extension
+
+else
+
+-- ordinary Neovim
+
 -- Lazy plugin manager --
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -19,3 +27,4 @@ vim.g.mapleader = " "
 
 require("lazy").setup("plugins")
 
+end
