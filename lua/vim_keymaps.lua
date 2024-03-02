@@ -36,8 +36,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Cursor Movement --
 -- vim.keymap.set({"n", "v"}, "H", "b")
 -- vim.keymap.set({"n", "v"}, "L", "w")
-vim.keymap.set({"n", "v"}, "<a-h>", "_")
-vim.keymap.set({"n", "v"}, "<a-l>", "$")
+vim.keymap.set({"n", "v"}, "H", "_")
+vim.keymap.set({"n", "v"}, "L", "$")
 
 
 -- Delete word --
