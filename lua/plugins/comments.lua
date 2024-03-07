@@ -6,13 +6,16 @@ return {
 		opts = {
 			keywords = {
 				-- My own keywords
+				TODO = {icon = "", color = "info"},
+				DONE = {icon = "", color = "hint"},
 				WARN = {alt = {"WARNING", "XXX"}},
 				TEST = {icon = "󱈲", color = "warning", alt = {"TESTING"}},
 				PASS = {icon = "󱈬", color = "hint", alt = {"PASSED"}},
 				FAIL = {icon = "󱈴", color = "error", alt = {"FAILED"}},
 				TEMP = {icon = "󰶯", color = "warning", alt = {"BANDAID", "BANDAGE", "PATCH", "PATCHWORK"}},
-				WTF = {icon = "󰚌", color = "error", alt = {"SKULL", "HUH"}},
+				WTF = {icon = "󰚌", color = "error", alt = {"SKULL", "HUH", "OMG"}},
 				-- TODO:
+				-- DONE:
 				-- NOTE:
 				-- HACK:
 				-- BUG:
@@ -31,6 +34,7 @@ return {
 				-- PATCHWORK:
 				-- WTF:
 				-- HUH:
+				-- OMG:
 				-- XXX:
 				-- WARN:
 				-- WARNING:
