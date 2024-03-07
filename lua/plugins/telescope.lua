@@ -8,12 +8,24 @@ return {
 		},
 		config = function()
 			local telescope = require('telescope')
+			local telescope_action = require('telescope.actions')
 			telescope.setup({
+				defaults = {
+					mappings = {
+						i = {
+							["<C-x>"] = telescope_action.file_vsplit,
+							["<C-s>"] = telescope_action.file_split,
+						},
+						n = {
+							["<C-x>"] = telescope_action.file_vsplit,
+							["<C-s>"] = telescope_action.file_split,
+						},
+					}
+				},
 				extensions = {
 					file_browser = {
 						theme = 'ivy',
 						hijack_netw = true,
-
 					},
 				},
 
