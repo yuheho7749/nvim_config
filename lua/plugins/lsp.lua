@@ -24,14 +24,21 @@ return {
 			local lspconfig = require('lspconfig')
 
 			local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-			local default_setup = function(server)
+			local default_setup = function(server, opt)
 				lspconfig[server].setup({
 					capabilities = lsp_capabilities,
+					settings = opt,
 				})
 			end
 
-			-- NOTE: Add more languages here if needed 
-			default_setup("lua_ls")
+			-- Add more languages here if needed 
+			default_setup("lua_ls", {
+				Lua = {
+					diagnostics = {
+						globals = {"vim"}
+					}
+				}
+			})
 			default_setup("pyright")
 			default_setup("clangd")
 			default_setup("rust_analyzer")
