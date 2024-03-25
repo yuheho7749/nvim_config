@@ -59,6 +59,7 @@ return {
 					vim.keymap.set("n", "gd", telescope_builtin.lsp_definitions, opts("Goto definitions"))
 					vim.keymap.set("n", "gr", telescope_builtin.lsp_references, opts("Goto references"))
 					vim.keymap.set('n', '<leader>td', telescope_builtin.lsp_type_definitions, opts("Type definitions"))
+					vim.keymap.set('n', '<leader>ds', telescope_builtin.lsp_document_symbols, opts("Document symbols"))
 					vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts("Hover"))
 					vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts("Open Diagnostic"))
 					vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts("Goto next diagnostic"))
