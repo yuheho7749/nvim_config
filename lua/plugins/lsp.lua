@@ -7,7 +7,8 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/nvim-cmp",
-			"L3MON4D3/LuaSnip"
+			"L3MON4D3/LuaSnip",
+			'nvim-telescope/telescope.nvim',
 		},
 		config = function()
 			require("mason").setup()
@@ -54,14 +55,15 @@ return {
 							desc = desc
 						}
 					end
-					vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts("Goto definition"))
+					local telescope_builtin = require('telescope.builtin')
+					vim.keymap.set("n", "gd", telescope_builtin.lsp_definitions, opts("Goto definitions"))
+					vim.keymap.set("n", "gr", telescope_builtin.lsp_references, opts("Goto references"))
+					vim.keymap.set('n', '<leader>td', telescope_builtin.lsp_type_definitions, opts("Type definitions"))
 					vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts("Hover"))
 					vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts("Open Diagnostic"))
 					vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts("Goto next diagnostic"))
 					vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts("Goto prev diagnostic"))
 					vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts("Code action"))
-					vim.keymap.set("n", "<leader>cr", function() vim.lsp.buf.references() end, opts("References"))
-					vim.keymap.set('n', '<leader>td', vim.lsp.buf.type_definition, opts("Type def"))
 					vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts("Rename"))
 					vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts("Signature Help"))
 				end
