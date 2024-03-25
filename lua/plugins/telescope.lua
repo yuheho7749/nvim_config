@@ -11,6 +11,12 @@ return {
 			local telescope_action = require('telescope.actions')
 			telescope.setup({
 				defaults = {
+					layout_strategy = "vertical",
+					layout_config = {
+						vertical = {
+							preview_cutoff = 25,
+						},
+					},
 					mappings = {
 						i = {
 							["<C-x>"] = telescope_action.file_vsplit,
