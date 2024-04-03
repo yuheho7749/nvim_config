@@ -19,7 +19,6 @@ return {
 					"clangd",
 					"rust_analyzer",
 				},
-				automatic_installation = true,
 			}
 
 			local lspconfig = require('lspconfig')
@@ -43,6 +42,8 @@ return {
 			default_setup("pyright")
 			default_setup("clangd")
 			default_setup("rust_analyzer")
+			default_setup("ocamllsp")
+			default_setup("dafny")
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				desc = 'LSP Actions',
