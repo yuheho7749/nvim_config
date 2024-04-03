@@ -19,7 +19,6 @@ return {
 					"clangd",
 					"rust_analyzer",
 				},
-				automatic_installation = true,
 			}
 
 			local lspconfig = require('lspconfig')
