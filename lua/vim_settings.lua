@@ -11,3 +11,12 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 5
+
+-- autocommands --
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
