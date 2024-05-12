@@ -9,7 +9,7 @@ return {
 			require("nvim-treesitter.install").compilers = {"zig"}
 
 			configs.setup({
-				ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "cpp", "c_sharp" },
+				ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "cpp", "c_sharp", "glsl" },
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
