@@ -4,7 +4,7 @@ return {
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 			'nvim-telescope/telescope-file-browser.nvim',
-			-- 'BurntSushi/ripgrep',
+			'BurntSushi/ripgrep',
 		},
 		config = function()
 			local telescope = require('telescope')
@@ -26,6 +26,11 @@ return {
 							["<C-x>"] = telescope_action.file_vsplit,
 							["<C-s>"] = telescope_action.file_split,
 						},
+					},
+				},
+				pickers = {
+					find_files = {
+						no_ignore = true
 					}
 				},
 				extensions = {

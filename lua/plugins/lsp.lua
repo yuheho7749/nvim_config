@@ -40,7 +40,11 @@ return {
 				}
 			})
 			default_setup("pyright")
-			default_setup("clangd")
+			lspconfig["clangd"].setup({
+				capabilities = require('cmp_nvim_lsp').default_capabilities(),
+				filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "proto", "hip"}
+			})
+			-- default_setup("clangd")
 			default_setup("rust_analyzer")
 
 			vim.api.nvim_create_autocmd('LspAttach', {

@@ -4,9 +4,19 @@ return {
 		build = ":TSUpdate",
 		config = function ()
 			local configs = require("nvim-treesitter.configs")
+			vim.treesitter.language.register("cuda", "hip")
 
 			configs.setup({
-				ensure_installed = { "c", "lua", "vim", "vimdoc", "python", "cpp", "c_sharp" },
+				ensure_installed = {
+					"bash",
+					"c",
+					"lua",
+					"vim",
+					"vimdoc",
+					"python",
+					"cpp",
+					"rust",
+				},
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
